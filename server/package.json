@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "App to create memories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vatsuvaksi/LifeNest.git"
+  },
+  "author": "Vatsuvaksi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vatsuvaksi/LifeNest/issues"
+  },
+  "homepage": "https://github.com/vatsuvaksi/LifeNest#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
+  }
+}
