@@ -8,8 +8,6 @@ import postRoutes from "./routes/post.js";
  called the Same-Origin Policy (SOP).
 */
 const app = express();
-
-app.use("/posts", postRoutes); //Through this every route using port is going to start with /posts
 /*
 "extended" syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded
 "Limit" is used to parse the maximum size 
@@ -17,6 +15,9 @@ app.use("/posts", postRoutes); //Through this every route using port is going to
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors);
+
+
+app.use("/posts", postRoutes); //Through this every route using port is going to start with /posts
 
 const CONNECTION_URL =
   "mongodb+srv://vatsuvaksi:Passme123@lifenest-mern.icxcw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
