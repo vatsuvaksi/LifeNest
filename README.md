@@ -13,7 +13,7 @@
 * This gave a lot of scammers a way to cheat and gain profits by playing with the emotions of vulnerable patients and their families. 
 * This Application tends to give a valid platform i.e with authentication and information of the persons involved so that the scammers are avoided as they will have to show a proof of their identity and can be caught later.
 
-#### What problem did it solve? 
+#### What Makes this Application unique? 
 * The concept of authentication which gives the users a valid proof.
 * The concept of uploading a photograph along with the message so the severity of the condition of the patient an be understood. 
 * The UI which makes it easier to use.
