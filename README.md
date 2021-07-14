@@ -16,16 +16,16 @@
 #### What problem did it solve? 
 * The concept of authentication which gives the users a valid proof.
 * The concept of uploading a photograph along with the message so the severity of the condition of the patient an be understood. 
-* The UI which makes it easier to use
+* The UI which makes it easier to use.
 
 
 #### How to install ?
 * This application is currenty under process and hence not be hosted yet but to check this project you can follow these steps :- 
-* Clone this repository to your local host 
-* cd/back-end and use npm i to add all the modules used in making the application
+* Clone this repository to your local host. 
+* cd/back-end and use npm i to add all the modules used in making the application.
 * use nodemon app.js / node app.js to run the back-end which whill automatically connect it the mongoDb cloud.
-* cd/front-end npm run 
-* The above will open this project on local host 3000 and the back-end would be running on local host- 5000
+* cd/front-end npm run.
+* The above will open this project on local host 3000 and the back-end would be running on local host- 5000.
 
 ## Tech Stack
 
@@ -35,4 +35,5 @@ Node.js  | React.js
 Express.js | Material-UI
 MongoDB  |  HTML 
 Postman  | CSS
+Rest-API  | Axios
 
