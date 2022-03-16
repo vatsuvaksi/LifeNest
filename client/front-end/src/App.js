@@ -1,45 +1,39 @@
-import React , {useEffect} from "react";
-import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-import memories from "./images/memories.png";
-import Posts from "./components/Posts/Posts";
-import Form from "./components/Forms/Forms";
-import useStyles from "./styles";
-import {useDispatch} from 'react-redux';
-import {getPosts} from './actions/posts'
-const App = () => {
-  const classes = useStyles();
-  const dispatch = useDispatch();
+import React from 'react';
+import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from './components/Navbar';
+import Welcome from './components/Welcome';
+import Register from './components/Register';
+import Login from './components/Login';
+import Footer from './components/Footer';
+import ChatBot from '../src/components/ChatBot';
+import Home from './Home';
 
-  useEffect(() =>{
-    dispatch(getPosts());
-  },[dispatch]);
+export default function App() {
 
-  return (
-    <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">
-          LifeNest
-        </Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
-      </AppBar>
-      <Grow in>
-        <Container>
-          <Grid
-            container
-            justify="space-between"
-            alignItems="stretch"
-            spacing={3}
-          >
-            <Grid item xs={12} sm={7}>
-              <Posts />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Form />
-            </Grid>
-          </Grid>
-        </Container>
-      </Grow>
-    </Container>
-  );
-};
-export default App;
+    const heading = "Welcome to LifeNest";
+    const quote = "Always laugh when you can, it is cheapest medicine.";
+    const footer = "Lord Byron";
+
+    return (
+        <Router>
+            <NavigationBar />
+            <Container>
+                <Row>
+                    <Col lg={12} className={"margin-top"}>
+                        <Switch>
+                            <Route path="/" exact component={() => <Welcome heading={heading} quote={quote} footer={footer} />} />
+                            <Route path="/register" exact component={Register} />
+                            <Route path="/login" exact component={Login} />
+                            <Route path="/ChatBot" exact component={ChatBot}></Route>
+                            <Route path="/Home" exact component={Home}></Route>
+                        </Switch>
+                    </Col>
+                </Row>
+            </Container>
+            <Footer />
+        </Router>
+    );
+}
